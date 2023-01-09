@@ -1,16 +1,22 @@
 import React, { useState } from "react";
 
-function Example() {
+function UseStateComponent() {
   // Declare a state variable and a setter function
   const [count, setCount] = useState(0);
+  let clickCount = 0;
+
+  const onclickHandler = () => {
+    setCount(count + 1);
+    clickCount += 1
+    console.log(clickCount)
+  }
 
   return (
-    <div>
+    <div className="hook-component">
       <p>You clicked {count} times</p>
-      <button onClick={() => setCount(count + 1)}>Click me</button>
+      <p>I am not able to update {clickCount}</p>
+      <button onClick={onclickHandler}>Click me</button>
 
-      <br />
-      <br />
       <br />
 
       <p>
@@ -25,4 +31,4 @@ function Example() {
   );
 }
 
-export default Example;
+export default UseStateComponent;

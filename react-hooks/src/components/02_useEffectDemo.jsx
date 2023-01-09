@@ -1,10 +1,10 @@
 import { useState, useEffect } from 'react'
 import axios from 'axios';
 
-function Cats() {
+function UseEffectComponent() {
 
   const [varA, setVarA] = useState(0);
-  const [varB, setVarB] = useState('A');
+  const [varB, setVarB] = useState(1);
 
   const [catFact, setCatFact] = useState(null)
 
@@ -25,25 +25,30 @@ function Cats() {
     axios.get('https://catfact.ninja/fact').then(resp => {
       setCatFact(resp.data.fact)
     });
-    
   }, []);
 
   useEffect(() => {
     console.log("There was a side effect for All.");
   });
 
-  return <div className="cat-world-container">
+  return <div className="hook-component">
     
     <h3>Hello cat world</h3>
 
     <button data-testid="number" onClick={() => {
       setVarA(p => p+1); 
-    }}> {varA}  </button>
+    }}> Update varA ({varA}) </button>
 
-    <button onClick={() => setVarB(p => p+1)}> {varB}  </button>
+    <button onClick={() => setVarB(p => p+1)}> Update varB ({varB}) </button>
+    <p>Check Console to se side effect pattern</p>
+
+    <br />
+    <br />
+    Fix: <button> Get New Cat Fact  </button>
+
     
     <p>{catFact}</p>
   </div>
 }
 
-export default Cats;
+export default UseEffectComponent;
