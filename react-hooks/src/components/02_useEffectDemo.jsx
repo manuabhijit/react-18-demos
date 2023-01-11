@@ -6,7 +6,7 @@ function UseEffectComponent() {
   const [varA, setVarA] = useState(0);
   const [varB, setVarB] = useState(1);
 
-  const [catFact, setCatFact] = useState(null)
+  const [catFact, setCatFact] = useState(null);
 
   useEffect(() => {
     console.log("There was a side effect for Var A & B");

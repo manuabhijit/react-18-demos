@@ -3,13 +3,14 @@ import React, { useState } from "react";
 function UseStateComponent() {
   // Declare a state variable and a setter function
   const [count, setCount] = useState(0);
+
   let clickCount = 0;
 
   const onclickHandler = () => {
     setCount(count + 1);
-    clickCount += 1
-    console.log(clickCount)
-  }
+    clickCount += 1;
+    console.log({ clickCount });
+  };
 
   return (
     <div className="hook-component">

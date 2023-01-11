@@ -6,13 +6,17 @@ const ThemeContext = React.createContext("light");
 const UseContextComponent = () => {
   return (
     <div className="hook-component">
-      <ThemeContext.Provider value="dark">
+      
+      1.
+      <ThemeContext.Provider value="#00FF00">
         <MyComponent />
       </ThemeContext.Provider>
+      
       <br />
       <br />
-      <ThemeContext.Provider value="gray">
-        <MyComponent />
+
+      <ThemeContext.Provider value="#0000FF">
+        <MyComponent/>
       </ThemeContext.Provider>
     </div>
   );
