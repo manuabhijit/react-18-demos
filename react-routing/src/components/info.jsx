@@ -9,13 +9,13 @@ function useQuery() {
 function InfoComponent() {
 
   const { search } = useLocation();
-  console.log(search)
+  console.log(search);
 
   let query = useQuery();
+
   return (
     <div className="info-component">
       {query}  
-      {JSON.stringify({query})}
     </div>
   );
 }
