@@ -7,10 +7,12 @@ export const initialState = {
       title: "Second Note",
     },
   ],
+  catFact: [],
   counter: 1,
 };
 
 const notesReducer = (state = initialState, action = {}) => {
+  console.log(action);
   switch (action.type) {
     case "ADD_NOTE": {
       const uiNotes = state.uiNotes;
@@ -22,7 +24,13 @@ const notesReducer = (state = initialState, action = {}) => {
       };
       break;
     }
-
+    case "ADD_CAT_FACT": {
+      console.log(action);
+      state = {
+        ...state,
+      }
+      break;
+    }
     default: {
       console.log("UNKNOWN ACTION");
     }
