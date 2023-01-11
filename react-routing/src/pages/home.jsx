@@ -1,11 +1,11 @@
 import React from "react";
-import InfoComponent from "../components/info";
+// import InfoComponent from "../components/info";
 
 function HomeComponent() {
   return (
     <div className="page-component">
       home
-      <InfoComponent />
+      {/* <InfoComponent /> */}
     </div>
   );
 }
