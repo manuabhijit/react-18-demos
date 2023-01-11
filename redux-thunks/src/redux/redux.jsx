@@ -4,7 +4,7 @@ import addNotesAction from "./boilerplate/actions";
 import notesStore from "./boilerplate/store";
 import { useState } from "react";
 import { useEffect } from "react";
-import getNewCatFact from "./api.thunk";
+// import getNewCatFact from "./api.thunk";
 
 function ReduxComponent() {
   const { dispatch } = notesStore;
