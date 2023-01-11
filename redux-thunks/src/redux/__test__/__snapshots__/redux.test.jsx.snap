@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test: Special Mention component screenshot should render the Special Mention correctly 1`] = `
+<div>
+  <div>
+    <h1>
+      REDUX demo
+    </h1>
+    <br />
+    <input />
+    <button>
+      Add
+    </button>
+  </div>
+</div>
+`;
