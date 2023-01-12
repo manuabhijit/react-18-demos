@@ -12,7 +12,6 @@ export const initialState = {
 };
 
 const notesReducer = (state = initialState, action = {}) => {
-  console.log(action);
   switch (action.type) {
     case "ADD_NOTE": {
       const uiNotes = state.uiNotes;
@@ -25,7 +24,7 @@ const notesReducer = (state = initialState, action = {}) => {
       break;
     }
     case "ADD_CAT_FACT": {
-      console.log(action);
+      console.log(action, state);
       state = {
         ...state,
       }

@@ -7,11 +7,18 @@ const addCatFact = (myNoteObject) => ({
 
 function getNewCatFact() {
   const resource = `https://catfact.ninja/fact`;
+
   return async (dispatch) => {
     try {
       const response = await axios.get(resource);
-      dispatch(addCatFact(response.data.fact));
+      const factText = response.data.fact;
+
+      const action = addCatFact(factText);
+      dispatch(action);
     } catch (error) {
+
+      const action = addCatFact("Not found.")
+      dispatch(action);
     }
   };
 }
