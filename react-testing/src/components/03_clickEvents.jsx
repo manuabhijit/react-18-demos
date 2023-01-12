@@ -13,8 +13,8 @@ function ClickEvent({testClick}) {
     <div className="hook-component">
       <p>
         You clicked
-        <span data-testid="count-display"></span>
-        {count} times
+        <span data-testid="count-display">{count}</span>
+         times
       </p>
       <button data-testid="click-button" onClick={onclickHandler}>
         Click me
@@ -34,4 +34,7 @@ function ClickEvent({testClick}) {
   );
 }
 
+ClickEvent.defaultProps = {
+  testClick: () => {}
+}
 export default ClickEvent;
